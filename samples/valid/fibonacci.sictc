@@ -1,1 +1,25 @@
-
+program: fibonacci;
+# print the n-th fibonacci number, f(n), where
+  f(0) = 1, f(1) = 1, f(n) = f(n-1) + f(n-2)
+#
+var: m, n, f, g, h;
+# n: the fibonacci number to print
+  m: counter for loop
+  f: final value to print
+  g: m-1th fibonacci number
+  h: m-2nd fibonacci number
+#
+begin:
+  n:=5; # replace this with the number you want #
+  m:=1;
+  f:=1;
+  g:=1;
+  h:=0;
+  while: (m<=n), do:
+    f:=(g+h);
+    h:=g;
+    g:=f;
+    m:=(m+1);
+  end.
+  print: f;
+halt.
