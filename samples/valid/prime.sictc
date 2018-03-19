@@ -1,0 +1,29 @@
+program: prime;
+# Check whether `n` is prime.  Prints 1 if True, 0 if False.
+#
+var: n, i, limit, isprime;
+# n: the number to be checked for primality
+  i: counter for checking
+  limit: maximum prime factor to check
+  isprime: output
+#
+begin:
+  n:=13; # replace n with the value you want to check #
+  i:=3;
+  isprime:=1;
+  if: (n=1), then:
+    isprime:=0;
+  end.
+  if: ((n%2)=0), then:
+    isprime:=0;
+    i:=n;
+  end.
+  while: (i<n), do:
+    if: ((n%i)=0), then:
+      isprime:=0;
+      i:=n;
+    end.
+    i:=(i+2);
+  end.
+  print: isprime;
+halt.
