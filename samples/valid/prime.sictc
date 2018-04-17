@@ -1,10 +1,9 @@
 program: prime;
 # Check whether `n` is prime.  Prints 1 if True, 0 if False.
 #
-var: n, i, limit, isprime;
+var: n, i, isprime;
 # n: the number to be checked for primality
   i: counter for checking
-  limit: maximum prime factor to check
   isprime: output
 #
 begin:
