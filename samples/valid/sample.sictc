@@ -4,8 +4,7 @@ program: Sample;
 var: a, x, s, t; # all variables are integers #
 begin:
   a:=100;
-  if: (a>0), th # this line break is on purpose #
-  en:
+  if: (a>0), then:
     x:=1; s:=0;
     while: (x<=a), do:
       s:=(s+x); x:=(x+1);
